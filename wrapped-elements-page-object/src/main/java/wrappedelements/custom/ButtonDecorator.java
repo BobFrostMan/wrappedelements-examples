@@ -1,11 +1,11 @@
-package ua.foggger.testng.custom;
+package wrappedelements.custom;
 
 import ua.foggger.element.decorator.IElementDecorator;
 import ua.foggger.element.interactor.Interactors;
 import ua.foggger.helper.IHaveReflectionAccess;
 import ua.foggger.page.ElementNameResolver;
 import ua.foggger.page.LocatorResolver;
-import ua.foggger.testng.custom.annotation.ButtonElement;
+import wrappedelements.custom.annotation.ButtonElement;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

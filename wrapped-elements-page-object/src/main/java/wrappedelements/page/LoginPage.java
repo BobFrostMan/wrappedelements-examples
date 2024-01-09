@@ -1,4 +1,4 @@
-package ua.foggger.testng.page;
+package wrappedelements.page;
 
 import ua.foggger.annotation.WebElement;
 import ua.foggger.element.clickable.ClickableElement;

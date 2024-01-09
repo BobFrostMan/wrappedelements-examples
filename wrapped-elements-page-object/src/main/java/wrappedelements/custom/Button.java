@@ -1,4 +1,4 @@
-package ua.foggger.testng.custom;
+package wrappedelements.custom;
 
 import org.openqa.selenium.By;
 import ua.foggger.element.clickable.ClickableElement;

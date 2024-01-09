@@ -1,8 +1,9 @@
-package ua.foggger.testng.page;
+package wrappedelements.page;
 
 import ua.foggger.page.IPage;
-import ua.foggger.testng.custom.Button;
-import ua.foggger.testng.custom.annotation.ButtonElement;
+import wrappedelements.custom.Button;
+import wrappedelements.custom.annotation.ButtonElement;
+
 
 public interface InventoryPage extends IPage {
 

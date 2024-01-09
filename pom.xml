@@ -6,45 +6,44 @@
 
     <groupId>ua.foggger</groupId>
     <artifactId>wrappedelements-examples</artifactId>
-    <version>0.0.1</version>
+    <packaging>pom</packaging>
+    <version>${wrappedelements-examples.version}</version>
+    <modules>
+        <module>wrapped-elements-page-object</module>
+        <module>testng-example</module>
+        <module>junit4-example</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <wrappedelements-examples.version>0.0.1</wrappedelements-examples.version>
+        <wrappedelements.version>0.0.1</wrappedelements.version>
+        <selenium.version>4.15.0</selenium.version>
+        <webdriver.manager.version>5.6.2</webdriver.manager.version>
+        <slf4j.version>2.0.5</slf4j.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.1.0</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>guava</artifactId>
-                    <groupId>com.google.guava</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>ua.foggger</groupId>
             <artifactId>wrappedelements</artifactId>
-            <version>0.0.1</version>
+            <version>${wrappedelements.version}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.15.0</version>
+            <version>${selenium.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.6.2</version>
+            <version>${webdriver.manager.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.6.1</version>
+            <version>${slf4j.version}</version>
         </dependency>
-
     </dependencies>
 </project>

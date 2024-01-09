@@ -1,4 +1,4 @@
-package ua.foggger.testng;
+package ua.foggger.testng.smoke;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,14 +9,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ua.foggger.config.WrappedElements;
-import ua.foggger.testng.custom.Button;
-import ua.foggger.testng.custom.ButtonDecorator;
-import ua.foggger.testng.page.InventoryPage;
-import ua.foggger.testng.page.LoginPage;
+import wrappedelements.custom.Button;
+import wrappedelements.custom.ButtonDecorator;
+import wrappedelements.page.InventoryPage;
+import wrappedelements.page.LoginPage;
 
 import java.time.Duration;
 
-public class SmokeTest {
+public class TestNGSmokeTest {
 
     private LoginPage loginPage;
     private InventoryPage inventoryPage;

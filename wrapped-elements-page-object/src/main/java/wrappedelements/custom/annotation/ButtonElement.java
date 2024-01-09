@@ -1,4 +1,4 @@
-package ua.foggger.testng.custom.annotation;
+package wrappedelements.custom.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
