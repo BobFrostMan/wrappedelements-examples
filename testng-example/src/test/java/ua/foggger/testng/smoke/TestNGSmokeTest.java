@@ -56,7 +56,7 @@ public class TestNGSmokeTest {
         loginPage.loginInput().sendKeys("standard_user");
         loginPage.passwordInput().sendKeys("secret_sauce");
         loginPage.loginButton().click();
-        inventoryPage.addToCartButton().click();
+        Assert.assertEquals(inventoryPage.addToCartButtons().size(), 6);
         Assert.assertEquals(WrappedElements.getDriver().getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
 

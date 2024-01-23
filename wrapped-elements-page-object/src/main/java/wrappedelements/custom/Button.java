@@ -1,8 +1,8 @@
 package wrappedelements.custom;
 
 import org.openqa.selenium.By;
-import ua.foggger.element.clickable.ClickableElement;
-import ua.foggger.element.interactor.IElementInteractor;
+import ua.foggger.wrapper.element.IElementInteractor;
+import ua.foggger.wrapper.element.clickable.ClickableElement;
 
 public class Button extends ClickableElement {
 
@@ -19,7 +19,7 @@ public class Button extends ClickableElement {
     }
 
     void setInteractor(IElementInteractor interactor){
-        this.detection = interactor;
+        this.interactor = interactor;
     }
 
 }
