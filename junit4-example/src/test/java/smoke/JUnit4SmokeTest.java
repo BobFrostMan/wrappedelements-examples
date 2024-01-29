@@ -47,12 +47,16 @@ public class JUnit4SmokeTest {
     }
 
     @Test
-    public void simpleUIInteraction2Test() {
+    public void nestedComponentsInteractionsTest() {
         loginPage.loginInput().sendKeys("standard_user");
         loginPage.passwordInput().sendKeys("secret_sauce");
         loginPage.loginButton().click();
-        inventoryPage.addToCartButton().click();
-        Assert.assertEquals("https://www.saucedemo.com/inventory.html", WrappedElements.getDriver().getCurrentUrl());
+
+        inventoryPage.inventoryItem("Sauce Labs Fleece Jacket").addToCartButton().click();
+        String text = inventoryPage.header().basket().notificationsCountLabel().getText();
+        Assert.assertEquals("Basket element should have 1 notification label", Integer.parseInt(text), 1);
+        inventoryPage.header().basket().basketButton().click();
+        Assert.assertEquals(WrappedElements.getDriver().getCurrentUrl(), "https://www.saucedemo.com/cart.html");
     }
 
 
