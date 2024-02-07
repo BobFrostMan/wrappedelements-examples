@@ -1,7 +1,7 @@
 package wrappedelements.page;
 
 import ua.foggger.annotation.WebElement;
-import ua.foggger.wrapper.element.clickable.ClickableElement;
+import ua.foggger.wrapper.element.impl.ClickableElement;
 import ua.foggger.wrapper.page.IPage;
 
 public interface LoginPage extends IPage {

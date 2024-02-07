@@ -3,7 +3,7 @@ package wrappedelements.component;
 
 import ua.foggger.annotation.WebComponent;
 import ua.foggger.wrapper.block.WrappedComponent;
-import ua.foggger.wrapper.element.clickable.ClickableElement;
+import ua.foggger.wrapper.element.impl.ClickableElement;
 import wrappedelements.custom.Button;
 import wrappedelements.custom.annotation.ButtonElement;
 

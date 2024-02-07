@@ -1,7 +1,7 @@
 package wrappedelements.custom;
 
 import org.openqa.selenium.support.pagefactory.ByChained;
-import ua.foggger.helper.IHaveReflectionAccess;
+import ua.foggger.common.IHaveReflectionAccess;
 import ua.foggger.wrapper.block.WrappedBlockMeta;
 import ua.foggger.wrapper.element.IElementAnnotationProcessor;
 import ua.foggger.wrapper.interactor.Interactors;
@@ -32,7 +32,7 @@ public class ButtonDecorator implements IElementAnnotationProcessor, IHaveReflec
         } else {
             button.setLocator(locatorResolver.resolveLocator(annotation.value(), method, args));
         }
-        button.setInteractor(Interactors.getRegisteredInteractor(Interactors.UNTIL_CLICKABLE));
+        button.setInteractor(Interactors.getRegisteredInteractor("until_clickable"));
         button.setTimeoutInSeconds(30);
         return element;
     }
