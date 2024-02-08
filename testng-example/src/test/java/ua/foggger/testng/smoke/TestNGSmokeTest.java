@@ -30,7 +30,7 @@ public class TestNGSmokeTest {
                     options.setImplicitWaitTimeout(Duration.ofSeconds(10));
                     return new ChromeDriver();
                 })
-                .registerDecorator(Button.class, new ButtonDecorator());
+                .registerAnnotationProcessor(Button.class, new ButtonDecorator());
 
         loginPage = WrappedElements.initPage(LoginPage.class);
         inventoryPage = WrappedElements.initPage(InventoryPage.class);

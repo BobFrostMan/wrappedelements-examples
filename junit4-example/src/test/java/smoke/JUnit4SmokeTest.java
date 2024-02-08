@@ -27,7 +27,7 @@ public class JUnit4SmokeTest {
                     options.setImplicitWaitTimeout(Duration.ofSeconds(10));
                     return new ChromeDriver();
                 })
-                .registerDecorator(Button.class, new ButtonDecorator());
+                .registerAnnotationProcessor(Button.class, new ButtonDecorator());
     }
 
     @Before
