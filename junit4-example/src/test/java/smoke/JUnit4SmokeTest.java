@@ -5,6 +5,7 @@ import org.junit.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import ua.foggger.config.WrappedElements;
+import wrappedelements.component.InventoryItem;
 import wrappedelements.custom.Button;
 import wrappedelements.custom.ButtonDecorator;
 import wrappedelements.page.InventoryPage;
@@ -12,6 +13,7 @@ import wrappedelements.page.LoginPage;
 
 
 import java.time.Duration;
+import java.util.List;
 
 public class JUnit4SmokeTest {
 
@@ -57,6 +59,17 @@ public class JUnit4SmokeTest {
         Assert.assertEquals("Basket element should have 1 notification label", Integer.parseInt(text), 1);
         inventoryPage.header().basket().basketButton().click();
         Assert.assertEquals(WrappedElements.getDriver().getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+    }
+
+    @Test
+    public void listNestedComponentsInteractionsTest() {
+        loginPage.loginInput().sendKeys("standard_user");
+        loginPage.passwordInput().sendKeys("secret_sauce");
+        loginPage.loginButton().click();
+
+        List<InventoryItem> items = inventoryPage.inventoryItems();
+        InventoryItem item = items.get(3);
+        Assert.assertEquals(item.itemNameLabel().getText(), "Sauce Labs Fleece Jacket");
     }
 
 

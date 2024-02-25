@@ -1,11 +1,9 @@
 package wrappedelements.custom;
 
 import org.openqa.selenium.support.pagefactory.ByChained;
-import ua.foggger.annotation.AnnotatedMethodMeta;
 import ua.foggger.common.IHaveReflectionAccess;
+import ua.foggger.wrapper.IAnnotationProcessor;
 import ua.foggger.wrapper.block.WrappedBlockMeta;
-import ua.foggger.wrapper.element.IElementAnnotationProcessor;
-import ua.foggger.wrapper.element.impl.AbstractElementProcessor;
 import ua.foggger.wrapper.interactor.Interactors;
 import ua.foggger.wrapper.page.ElementNameResolver;
 import ua.foggger.wrapper.page.LocatorResolver;
@@ -13,7 +11,7 @@ import wrappedelements.custom.annotation.ButtonElement;
 
 import java.lang.reflect.Method;
 
-public class ButtonDecorator implements IElementAnnotationProcessor, IHaveReflectionAccess {
+public class ButtonDecorator implements IAnnotationProcessor, IHaveReflectionAccess {
 
     private ElementNameResolver elementNameResolver;
     private LocatorResolver locatorResolver;

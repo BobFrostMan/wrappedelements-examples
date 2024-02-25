@@ -9,12 +9,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ua.foggger.config.WrappedElements;
+import wrappedelements.component.InventoryItem;
 import wrappedelements.custom.Button;
 import wrappedelements.custom.ButtonDecorator;
 import wrappedelements.page.InventoryPage;
 import wrappedelements.page.LoginPage;
 
 import java.time.Duration;
+import java.util.List;
 
 public class TestNGSmokeTest {
 
@@ -62,6 +64,17 @@ public class TestNGSmokeTest {
         Assert.assertEquals(Integer.parseInt(text), 1, "Basket element should have 1 notification label");
         inventoryPage.header().basket().basketButton().click();
         Assert.assertEquals(WrappedElements.getDriver().getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+    }
+
+    @Test
+    public void listNestedComponentsInteractionsTest() {
+        loginPage.loginInput().sendKeys("standard_user");
+        loginPage.passwordInput().sendKeys("secret_sauce");
+        loginPage.loginButton().click();
+
+        List<InventoryItem> items = inventoryPage.inventoryItems();
+        InventoryItem item = items.get(3);
+        Assert.assertEquals(item.itemNameLabel().getText(), "Sauce Labs Fleece Jacket");
     }
 
 
