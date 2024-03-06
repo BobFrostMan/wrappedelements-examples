@@ -1,7 +1,6 @@
 package wrappedelements.component;
 
 
-import ua.foggger.annotation.WebComponent;
 import ua.foggger.annotation.WebElement;
 import ua.foggger.wrapper.block.WrappedComponent;
 import ua.foggger.wrapper.element.impl.ClickableElement;

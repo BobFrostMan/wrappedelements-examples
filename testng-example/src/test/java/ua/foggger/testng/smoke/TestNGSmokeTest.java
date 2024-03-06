@@ -36,12 +36,11 @@ public class TestNGSmokeTest {
 
         loginPage = WrappedElements.initPage(LoginPage.class);
         inventoryPage = WrappedElements.initPage(InventoryPage.class);
-        //TODO: need to add convenient mechanism to open page
     }
 
     @BeforeMethod
     public void beforeMethod() {
-        WrappedElements.getDriver().get("https://www.saucedemo.com/");
+        loginPage.driver().get("https://www.saucedemo.com/");
     }
 
     @Test
@@ -50,7 +49,7 @@ public class TestNGSmokeTest {
         loginPage.passwordInput().sendKeys("secret_sauce");
         loginPage.loginButton().click();
 
-        Assert.assertEquals(WrappedElements.getDriver().getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
+        Assert.assertEquals(loginPage.driver().getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
 
     @Test
@@ -63,7 +62,7 @@ public class TestNGSmokeTest {
         String text = inventoryPage.header().basket().notificationsCountLabel().getText();
         Assert.assertEquals(Integer.parseInt(text), 1, "Basket element should have 1 notification label");
         inventoryPage.header().basket().basketButton().click();
-        Assert.assertEquals(WrappedElements.getDriver().getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+        Assert.assertEquals(inventoryPage.driver().getCurrentUrl(), "https://www.saucedemo.com/cart.html");
     }
 
     @Test
@@ -74,6 +73,11 @@ public class TestNGSmokeTest {
 
         List<InventoryItem> items = inventoryPage.inventoryItems();
         InventoryItem item = items.get(3);
+        item.priceLabel().getText();
+        List<InventoryItem> items2 = inventoryPage.inventoryItemList().inventoryItems();
+        InventoryItem item2 = items2.get(3);
+        item2.priceLabel().getText();
+        item2.addToCartButton().click();
         Assert.assertEquals(item.itemNameLabel().getText(), "Sauce Labs Fleece Jacket");
     }
 
