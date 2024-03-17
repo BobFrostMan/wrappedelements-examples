@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import ua.foggger.config.WrappedElements;
 import wrappedelements.component.InventoryItem;
 import wrappedelements.custom.Button;
-import wrappedelements.custom.ButtonDecorator;
+import wrappedelements.custom.ButtonAnnotationProcessor;
 import wrappedelements.page.InventoryPage;
 import wrappedelements.page.LoginPage;
 
@@ -32,7 +32,7 @@ public class TestNGSmokeTest {
                     options.setImplicitWaitTimeout(Duration.ofSeconds(10));
                     return new ChromeDriver();
                 })
-                .registerAnnotationProcessor(Button.class, new ButtonDecorator());
+                .registerAnnotationProcessor(Button.class, new ButtonAnnotationProcessor());
 
         loginPage = WrappedElements.initPage(LoginPage.class);
         inventoryPage = WrappedElements.initPage(InventoryPage.class);

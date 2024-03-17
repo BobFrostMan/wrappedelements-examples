@@ -2,14 +2,12 @@ package smoke;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import ua.foggger.config.WrappedElements;
 import wrappedelements.component.InventoryItem;
 import wrappedelements.custom.Button;
-import wrappedelements.custom.ButtonDecorator;
+import wrappedelements.custom.ButtonAnnotationProcessor;
 import wrappedelements.page.InventoryPage;
 import wrappedelements.page.LoginPage;
 
@@ -31,7 +29,7 @@ public class JUnit4SmokeTest {
                     options.setImplicitWaitTimeout(Duration.ofSeconds(10));
                     return new ChromeDriver();
                 })
-                .registerAnnotationProcessor(Button.class, new ButtonDecorator());
+                .registerAnnotationProcessor(Button.class, new ButtonAnnotationProcessor());
     }
 
     @Before
@@ -71,6 +69,11 @@ public class JUnit4SmokeTest {
 
         List<InventoryItem> items = inventoryPage.inventoryItems();
         InventoryItem item = items.get(3);
+        item.priceLabel().getText();
+        List<InventoryItem> items2 = inventoryPage.inventoryItemList().inventoryItems();
+        InventoryItem item2 = items2.get(3);
+        item2.priceLabel().getText();
+        item2.addToCartButton().click();
         Assert.assertEquals(item.itemNameLabel().getText(), "Sauce Labs Fleece Jacket");
     }
 

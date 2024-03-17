@@ -11,12 +11,12 @@ import wrappedelements.custom.annotation.ButtonElement;
 
 import java.lang.reflect.Method;
 
-public class ButtonDecorator implements IAnnotationProcessor, IHaveReflectionAccess {
+public class ButtonAnnotationProcessor implements IAnnotationProcessor, IHaveReflectionAccess {
 
     private ElementNameResolver elementNameResolver;
     private LocatorResolver locatorResolver;
 
-    public ButtonDecorator() {
+    public ButtonAnnotationProcessor() {
         elementNameResolver = new ElementNameResolver();
         locatorResolver = new LocatorResolver();
     }

@@ -18,5 +18,4 @@ public interface InventoryItem extends WrappedComponent {
     @ButtonElement(".//div[@class='pricebar']//button")
     Button addToCartButton();
 
-
 }
