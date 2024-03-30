@@ -4,7 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import ua.foggger.config.WrappedElements;
+import io.github.bobfrostman.config.WrappedElements;
 import wrappedelements.component.InventoryItem;
 import wrappedelements.custom.Button;
 import wrappedelements.custom.ButtonAnnotationProcessor;

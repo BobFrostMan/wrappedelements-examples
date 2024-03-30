@@ -1,8 +1,8 @@
 package wrappedelements.page;
 
-import ua.foggger.annotation.WebElement;
-import ua.foggger.wrapper.element.impl.ClickableElement;
-import ua.foggger.wrapper.page.IPage;
+import io.github.bobfrostman.annotation.WebElement;
+import io.github.bobfrostman.wrapper.element.impl.ClickableElement;
+import io.github.bobfrostman.wrapper.page.IPage;
 
 public interface LoginPage extends IPage {
 

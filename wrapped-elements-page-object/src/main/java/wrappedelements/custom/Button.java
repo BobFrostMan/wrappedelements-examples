@@ -1,8 +1,8 @@
 package wrappedelements.custom;
 
 import org.openqa.selenium.By;
-import ua.foggger.wrapper.element.impl.ClickableElement;
-import ua.foggger.wrapper.interactor.IElementInteractor;
+import io.github.bobfrostman.wrapper.element.impl.ClickableElement;
+import io.github.bobfrostman.wrapper.interactor.IElementInteractor;
 
 public class Button extends ClickableElement {
 

@@ -1,12 +1,12 @@
 package wrappedelements.custom;
 
 import org.openqa.selenium.support.pagefactory.ByChained;
-import ua.foggger.common.IHaveReflectionAccess;
-import ua.foggger.wrapper.IAnnotationProcessor;
-import ua.foggger.wrapper.block.WrappedBlockMeta;
-import ua.foggger.wrapper.interactor.Interactors;
-import ua.foggger.wrapper.page.ElementNameResolver;
-import ua.foggger.wrapper.page.LocatorResolver;
+import io.github.bobfrostman.common.IHaveReflectionAccess;
+import io.github.bobfrostman.wrapper.IAnnotationProcessor;
+import io.github.bobfrostman.wrapper.block.WrappedBlockMeta;
+import io.github.bobfrostman.wrapper.interactor.Interactors;
+import io.github.bobfrostman.wrapper.page.ElementNameResolver;
+import io.github.bobfrostman.wrapper.page.LocatorResolver;
 import wrappedelements.custom.annotation.ButtonElement;
 
 import java.lang.reflect.Method;

@@ -1,7 +1,7 @@
 package wrappedelements.component;
 
-import ua.foggger.annotation.WebComponent;
-import ua.foggger.wrapper.block.WrappedComponent;
+import io.github.bobfrostman.annotation.WebComponent;
+import io.github.bobfrostman.wrapper.block.WrappedComponent;
 
 import java.util.List;
 

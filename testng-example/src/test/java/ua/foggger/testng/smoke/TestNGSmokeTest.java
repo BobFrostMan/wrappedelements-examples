@@ -1,4 +1,4 @@
-package ua.foggger.testng.smoke;
+package io.github.bobfrostman.testng.smoke;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ua.foggger.config.WrappedElements;
+import io.github.bobfrostman.config.WrappedElements;
 import wrappedelements.component.InventoryItem;
 import wrappedelements.custom.Button;
 import wrappedelements.custom.ButtonAnnotationProcessor;

@@ -1,7 +1,7 @@
 package wrappedelements.page;
 
-import ua.foggger.annotation.WebComponent;
-import ua.foggger.wrapper.page.IPage;
+import io.github.bobfrostman.annotation.WebComponent;
+import io.github.bobfrostman.wrapper.page.IPage;
 import wrappedelements.component.Header;
 
 public interface BaseSauceLabsLoggedInPage extends IPage {

@@ -1,9 +1,9 @@
 package wrappedelements.component;
 
 
-import ua.foggger.annotation.WebElement;
-import ua.foggger.wrapper.block.WrappedComponent;
-import ua.foggger.wrapper.element.impl.ClickableElement;
+import io.github.bobfrostman.annotation.WebElement;
+import io.github.bobfrostman.wrapper.block.WrappedComponent;
+import io.github.bobfrostman.wrapper.element.impl.ClickableElement;
 import wrappedelements.custom.Button;
 import wrappedelements.custom.annotation.ButtonElement;
 

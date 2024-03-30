@@ -1,7 +1,7 @@
 package wrappedelements.page;
 
-import ua.foggger.annotation.Parameter;
-import ua.foggger.annotation.WebComponent;
+import io.github.bobfrostman.annotation.Parameter;
+import io.github.bobfrostman.annotation.WebComponent;
 import wrappedelements.component.InventoryItem;
 import wrappedelements.component.InventoryItemList;
 
